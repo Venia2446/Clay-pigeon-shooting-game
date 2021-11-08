@@ -8,21 +8,18 @@ public class Camera_pos : MonoBehaviour
     public float sens_Y;
     private float s_X, s_Y;
     public Transform body;
-    private bool mouse = true;
+    
     void Start()
     {
-        if (mouse)
-        {
+        
 
-            Cursor.lockState = CursorLockMode.Locked;
-            
-        }
-      
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        Cursor.lockState = CursorLockMode.Locked;
         s_X += -1*Input.GetAxisRaw("Mouse Y") * sens_X*Time.deltaTime;
         s_Y += Input.GetAxisRaw("Mouse X") * sens_Y*Time.deltaTime;
         s_X = Mathf.Clamp(s_X, -90, 90);
