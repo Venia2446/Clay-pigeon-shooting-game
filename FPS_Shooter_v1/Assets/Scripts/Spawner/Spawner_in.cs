@@ -32,11 +32,14 @@ public class Spawner_in : MonoBehaviour
             Spawm_rotatet = new Vector3(0, 1f, 0);
             transform.Rotate(Spawm_rotatet * speed, angle);
         }
-        else
+        
         {
             Spawm_rotatet = new Vector3(0, 1f, 0);
-            transform.Rotate(Spawm_rotatet * speed, angle);
+            transform.Rotate(Spawm_rotatet * speed);
         }
+        
+
+        
 
 
     }

@@ -19,7 +19,7 @@ public class Spawner_out : MonoBehaviour
         {
             GameObject New_Target = Instantiate(Target, transform.position, transform.rotation);
             New_Target.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * speed);
-            Destroy(New_Target, 2f);
+            Destroy(New_Target, 3f);
             _timeParams = 0;
         }
        

@@ -26,7 +26,13 @@ public class Challenge_mod : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        spawner_out_script.speed += 5 * Time.deltaTime;
+        if (chalange_mode_status == true)
+        {
+            spawner_out_script.speed += 5 * Time.deltaTime;
+            Debug.Log(chalange_mode_status);
+        }
+
+
     }
     private void OnCollisionEnter(Collision collision)
     {
