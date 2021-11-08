@@ -64,15 +64,23 @@ public class Shutting_Screept : MonoBehaviour
         ammo_challenge_time_control += 0.5;
         if (ch_mod.get_chalange_mode_status() == true)
         {
-            if (ammo_challenge_time_control%50 == 0 )
+            if (Ammo > 0)
+            {
+                if (ammo_challenge_time_control % 50 == 0)
                     Ammo -= 5;
-            ammo_text.text = ($"Ammo:{Ammo}");
+
+                ammo_text.text = ($"Ammo:{Ammo}");
+            }
+            else
+            {
+                Ammo = 0;
+            }
         }
     }
     void Update()
     {
         score_text.text = ($"Score:{Convert.ToString(player_score)}"); ;
-        if (Input.GetKeyDown(KeyCode.Mouse0) && Ammo != 0)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && Ammo > 0)
         {
             new_bullet = Instantiate(bullet, bullet_spawn.position, bullet_spawn.rotation);
             new_bullet.GetComponent<cossilsion_target>()._init(this);
