@@ -9,38 +9,23 @@ public class Spawner_in : MonoBehaviour
     public float speed;
     public float angle;
     private Vector3 Spawm_rotatet;
-
-    
-
-
-    // Start is called before the first frame update
     void Start()
     {
        
     }
-
-    // Update is called once per frame
     void Update()
-
-
     {
         if (challenge_mod.get_chalange_mode_status() == true)
         {
             speed += Random.Range(-10f, 10f);
             angle += Random.Range(-5f, 5f);
-
+            
             Spawm_rotatet = new Vector3(0, 1f, 0);
             transform.Rotate(Spawm_rotatet * speed, angle);
         }
-        
         {
             Spawm_rotatet = new Vector3(0, 1f, 0);
             transform.Rotate(Spawm_rotatet * speed);
         }
-        
-
-        
-
-
     }
 }

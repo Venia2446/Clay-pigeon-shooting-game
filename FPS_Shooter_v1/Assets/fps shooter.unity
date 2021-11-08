@@ -2167,7 +2167,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c311e2ddb24ebd746b8f25822df1ef97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ch_mod_2: {fileID: 1885185454}
   Target: {fileID: 4453822153091447004, guid: 1b543cc7a8f68e24bbc262616bcaa3e3, type: 3}
+  green_target: {fileID: 4453822153091447004, guid: 5eaed943ec8bddf4c9dd36d689c9ff51, type: 3}
   speed: 900
 --- !u!1 &934704636
 GameObject:
@@ -4869,6 +4871,10 @@ PrefabInstance:
       propertyPath: bullet
       value: 
       objectReference: {fileID: 129494340450282501, guid: b1865d270c4a0764c8ba0ddea1ce4686, type: 3}
+    - target: {fileID: 636647997477928754, guid: a8e016473d895d74f9929f3ee576d111, type: 3}
+      propertyPath: ch_mod
+      value: 
+      objectReference: {fileID: 1885185454}
     - target: {fileID: 636647997477928754, guid: a8e016473d895d74f9929f3ee576d111, type: 3}
       propertyPath: Ammo_text
       value: 
