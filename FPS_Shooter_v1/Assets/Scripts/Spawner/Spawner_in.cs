@@ -1,25 +1,43 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Spawner_in : MonoBehaviour
 {
+    public Challenge_mod challenge_mod;
     public float speed;
-    public float angel;
+    public float angle;
     private Vector3 Spawm_rotatet;
+
+    
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
     void Update()
-    {
 
-        Spawm_rotatet = new Vector3(0, 1f, 0);
-        
-        transform.Rotate(Spawm_rotatet * speed,angel);
+
+    {
+        if (challenge_mod.get_chalange_mode_status() == true)
+        {
+            speed += Random.Range(-10f, 10f);
+            angle += Random.Range(-5f, 5f);
+
+            Spawm_rotatet = new Vector3(0, 1f, 0);
+            transform.Rotate(Spawm_rotatet * speed, angle);
+        }
+        else
+        {
+            Spawm_rotatet = new Vector3(0, 1f, 0);
+            transform.Rotate(Spawm_rotatet * speed, angle);
+        }
+
+
     }
 }

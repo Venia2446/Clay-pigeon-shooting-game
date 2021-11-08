@@ -13,8 +13,9 @@ public class Camera_pos : MonoBehaviour
     {
         if (mouse)
         {
-            Screen.lockCursor = true;
-            //Cursor.visible = true;
+
+            Cursor.lockState = CursorLockMode.Locked;
+            
         }
       
     }

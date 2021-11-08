@@ -37,6 +37,8 @@ public class cossilsion_target : MonoBehaviour
     {
         if (collision.gameObject.tag == "Target")
         {
+
+            sch_scr.score_up();
             GameObject text_score_clone;
             Instantiate(Explosion, collision.transform.position,Quaternion.identity);
             text_score_clone = Instantiate(Text_score, collision.transform.position, Quaternion.identity);
