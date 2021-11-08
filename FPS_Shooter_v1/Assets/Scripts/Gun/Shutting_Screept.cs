@@ -81,7 +81,7 @@ public class Shutting_Screept : MonoBehaviour
             else
             {
                 ch_mod.chalenge_mode_false_status();
-                Ammo = zero_Ammo();
+                zero_Ammo();
             }
         }
     }
