@@ -24,6 +24,11 @@ public class Shutting_Screept : MonoBehaviour
         bullet_Rb = bullet.GetComponent<Rigidbody>();
         ammo_text.text = ($"Ammo:{Ammo}");
     }
+    public void box_safe_ammo()
+    {
+        Ammo = 1;
+        ammo_text.text = ($"Ammo:{Ammo}");
+    }
     public void on_hit_green()
     {
         Ammo += 10;
@@ -34,9 +39,7 @@ public class Shutting_Screept : MonoBehaviour
     {
         Ammo += 3;
         ammo_text.text = ($"Ammo:{Ammo}");
-
     }
-
     public void reset_ammo()
     {
         Ammo = 100;
@@ -46,7 +49,6 @@ public class Shutting_Screept : MonoBehaviour
     {
         player_score += 500;
     }
-
     public void score_up()
     {
         player_score+= 100;
@@ -73,6 +75,7 @@ public class Shutting_Screept : MonoBehaviour
             }
             else
             {
+                ch_mod.chalenge_mode_false_status();
                 Ammo = 0;
             }
         }

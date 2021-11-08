@@ -481,7 +481,7 @@ GameObject:
   - component: {fileID: 344271538}
   m_Layer: 0
   m_Name: ammo_for_chose
-  m_TagString: Untagged
+  m_TagString: ammo_box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1808,9 +1808,10 @@ GameObject:
   - component: {fileID: 818041391}
   - component: {fileID: 818041390}
   - component: {fileID: 818041392}
+  - component: {fileID: 818041393}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1861,6 +1862,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2000
+--- !u!114 &818041393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818041389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 703f8594aeefe6143b79c0c128137551, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sh_scr_3: {fileID: 1727817902}
 --- !u!1 &839915036
 GameObject:
   m_ObjectHideFlags: 0
@@ -3826,6 +3840,17 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1727817902 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 636647997477928754, guid: a8e016473d895d74f9929f3ee576d111, type: 3}
+  m_PrefabInstance: {fileID: 636647997866463597}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5e338a70a1c0fc44ade7d9009ddc189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1767626002
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,11 @@ public class Challenge_mod : MonoBehaviour
     {
         return chalange_mode_status;
     }
+    public bool chalenge_mode_false_status()
+    {
+        chalange_mode_status = false;
+        return chalange_mode_status;
+    }
     void Start()
     {
         chalange_mode_status = false;   
@@ -32,11 +37,6 @@ public class Challenge_mod : MonoBehaviour
             chalange_mode_status = true;
             Debug.Log("HIT");
             spawner_out_script.speed = 500;
-            
-            
-            
-
-
 
         }
     }

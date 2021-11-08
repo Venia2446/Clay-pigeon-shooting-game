@@ -33,7 +33,6 @@ public class cossilsion_target : MonoBehaviour
         //hit_sound = gameObject.GetComponent<AudioSource>();
 
     }
-
     public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "green_target")

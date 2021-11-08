@@ -9,10 +9,6 @@ public class Spawner_in : MonoBehaviour
     public float speed;
     public float angle;
     private Vector3 Spawm_rotatet;
-    void Start()
-    {
-       
-    }
     void Update()
     {
         if (challenge_mod.get_chalange_mode_status() == true)

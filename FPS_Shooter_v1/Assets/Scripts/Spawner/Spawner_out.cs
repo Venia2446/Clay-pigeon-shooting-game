@@ -17,7 +17,6 @@ public class Spawner_out : MonoBehaviour
     {
         RB_Target = Target.GetComponent<Rigidbody>();
         rb_green_target = green_target.GetComponent<Rigidbody>();
-        
     }
         void FixedUpdate()
         {
