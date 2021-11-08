@@ -61,6 +61,11 @@ public class Shutting_Screept : MonoBehaviour
     {
         Ammo -= 5;
     }
+
+    public void zero_Ammo()
+    {
+        Ammo = 0;
+    }
     private void FixedUpdate()
     {
         ammo_challenge_time_control += 0.5;
@@ -69,14 +74,14 @@ public class Shutting_Screept : MonoBehaviour
             if (Ammo > 0)
             {
                 if (ammo_challenge_time_control % 50 == 0)
-                    Ammo -= 5;
+                    challenge_ammo_caunter();
 
                 ammo_text.text = ($"Ammo:{Ammo}");
             }
             else
             {
                 ch_mod.chalenge_mode_false_status();
-                Ammo = 0;
+                Ammo = zero_Ammo();
             }
         }
     }

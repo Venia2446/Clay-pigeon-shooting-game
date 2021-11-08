@@ -7,13 +7,11 @@ public class MovePlayer : MonoBehaviour
     public float speed;
     float x_move, y_move;
     private CharacterController CH_ctr;
-    // Start is called before the first frame update
+
     void Awake()
     {
         CH_ctr = GetComponent<CharacterController>();
     }
-
-    // Update is called once per frame
     void Update()
     {
         x_move = Input.GetAxis("Vertical")*speed*Time.deltaTime;
