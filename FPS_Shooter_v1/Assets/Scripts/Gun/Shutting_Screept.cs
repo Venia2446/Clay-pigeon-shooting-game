@@ -12,9 +12,11 @@ public class Shutting_Screept : MonoBehaviour
     public float bullet_speed;
     public Transform bullet_spawn;
     public GameObject bullet;
+    public GameObject shotgun_bullet;
     public Text ammo_text;
     public TMP_Text score_text;
     private GameObject new_bullet;
+    private GameObject new_shotgun_bullet;
     private Rigidbody bullet_Rb;
     private int player_score = 0;
     private double ammo_challenge_time_control;
@@ -101,7 +103,22 @@ public class Shutting_Screept : MonoBehaviour
             Destroy(new_bullet, 2f);
             ammo_text.text = ($"Ammo:{Ammo}");
         }
-
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                Quaternion new_shotgun_bullet_rotation = new Quaternion(bullet_spawn.rotation.x+UnityEngine.Random.Range(0,0.04f), bullet_spawn.rotation.y+UnityEngine.Random.Range(0, 0.04f), bullet_spawn.rotation.z, bullet_spawn.rotation.w);
+                
+                //Vector3 new_shotgun_bullet_position = new Vector3(bullet_spawn.position.x + UnityEngine.Random.Range(0, 0.5f), bullet_spawn.position.y + UnityEngine.Random.Range(0, 0.5f), bullet_spawn.position.z);
+                new_shotgun_bullet = Instantiate(shotgun_bullet, bullet_spawn.position, new_shotgun_bullet_rotation);
+                //new_shotgun_bullet.GetComponent<cossilsion_target>()._init(this);
+                new_shotgun_bullet.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * bullet_speed*0.7f);
+                
+                Destroy(new_shotgun_bullet, 2f);
+                
+            }
+            
+        }
     }
 }
 

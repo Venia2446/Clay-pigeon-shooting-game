@@ -1886,6 +1886,7 @@ GameObject:
   - component: {fileID: 839915037}
   - component: {fileID: 839915039}
   - component: {fileID: 839915038}
+  - component: {fileID: 839915040}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -1951,6 +1952,18 @@ Terrain:
   m_GroupingID: 0
   m_RenderingLayerMask: 1
   m_AllowAutoConnect: 1
+--- !u!114 &839915040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839915036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbb5d4d00e7f4594ebdc453941e6d979, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &852177141
 GameObject:
   m_ObjectHideFlags: 0
@@ -4129,6 +4142,7 @@ GameObject:
   - component: {fileID: 1797389230}
   - component: {fileID: 1797389229}
   - component: {fileID: 1797389228}
+  - component: {fileID: 1797389232}
   m_Layer: 0
   m_Name: water
   m_TagString: Untagged
@@ -4213,6 +4227,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1797389232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797389227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9509ef0011a7d644688f58b719be171f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1802073000
 GameObject:
   m_ObjectHideFlags: 0
@@ -5016,13 +5042,17 @@ PrefabInstance:
       propertyPath: bullet_speed
       value: 10000
       objectReference: {fileID: 0}
+    - target: {fileID: 636647997477928754, guid: a8e016473d895d74f9929f3ee576d111, type: 3}
+      propertyPath: shotgun_bullet
+      value: 
+      objectReference: {fileID: 129494340450282501, guid: 9df53da1e9486e44d96af5ed5e6c50c9, type: 3}
     - target: {fileID: 636647997477928755, guid: a8e016473d895d74f9929f3ee576d111, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 636647997477928755, guid: a8e016473d895d74f9929f3ee576d111, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.429
+      value: 0.353
       objectReference: {fileID: 0}
     - target: {fileID: 636647997477928755, guid: a8e016473d895d74f9929f3ee576d111, type: 3}
       propertyPath: m_LocalPosition.y

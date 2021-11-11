@@ -9,6 +9,7 @@ TagManager:
   - green_target
   - player
   - ammo_box
+  - shotgun_bullet
   layers:
   - Default
   - TransparentFX
@@ -16,8 +17,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - shotgun_bullet_layer
+  - bullet
   - 
   - 
   - 
