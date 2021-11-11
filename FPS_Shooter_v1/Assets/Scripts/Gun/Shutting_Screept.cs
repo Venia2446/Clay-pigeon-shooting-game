@@ -60,6 +60,10 @@ public class Shutting_Screept : MonoBehaviour
     public void challenge_ammo_caunter()
     {
         Ammo -= 5;
+        if (Ammo < 0)
+        {
+            zero_Ammo();
+        }
     }
 
     public void zero_Ammo()
@@ -97,6 +101,7 @@ public class Shutting_Screept : MonoBehaviour
             Destroy(new_bullet, 2f);
             ammo_text.text = ($"Ammo:{Ammo}");
         }
+
     }
 }
 
