@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class Bullet_one : MonoBehaviour
 {
-    public Shutting_Screept sh_scr_3;
+    public Shutting_Screept sh_scr;
+
+    
+
+
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
         Debug.Log(hit);
         if (hit.collider.tag == "ammo_box")
         {
-            sh_scr_3.box_safe_ammo();
+            sh_scr.box_safe_ammo();
         }
     }
 }

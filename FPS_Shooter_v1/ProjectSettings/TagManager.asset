@@ -10,6 +10,9 @@ TagManager:
   - player
   - ammo_box
   - shotgun_bullet
+  - challenge_button
+  - Spawner_in
+  - Spawner_out
   layers:
   - Default
   - TransparentFX

@@ -5,14 +5,27 @@ using UnityEngine;
 public class Easy_mod : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Spawner_out Sp_speed_hard;
+    private Spawner_out sp_speed_easy;
+
+    private void Start()
+    {
+        GameObject spawner_speed_easy;
+        spawner_speed_easy = GameObject.FindGameObjectWithTag("Spawner_out");
+         sp_speed_easy = spawner_speed_easy.GetComponent<Spawner_out>();
+        
+    
+    
+    }
 
     // Update is called once per frame
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Bullet")
         {
-            Sp_speed_hard.speed = 800;
+            
+            
+            
+            sp_speed_easy.easy_speed();
         }
     }
 }

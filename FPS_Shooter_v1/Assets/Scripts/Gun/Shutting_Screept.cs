@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class Shutting_Screept : MonoBehaviour
 {
-    public Challenge_mod ch_mod;
+    private Challenge_mod ch_mod;
     public int Ammo;
     public float bullet_speed;
     public Transform bullet_spawn;
@@ -23,8 +23,12 @@ public class Shutting_Screept : MonoBehaviour
 
     void Start()
     {
-        bullet_Rb = bullet.GetComponent<Rigidbody>();
-        ammo_text.text = ($"Ammo:{Ammo}");
+            GameObject button;
+            button = GameObject.FindGameObjectWithTag("challenge_button");
+
+            ch_mod = button.GetComponent<Challenge_mod>();
+            bullet_Rb = bullet.GetComponent<Rigidbody>();
+            ammo_text.text = ($"Ammo:{Ammo}");
     }
     public void box_safe_ammo()
     {

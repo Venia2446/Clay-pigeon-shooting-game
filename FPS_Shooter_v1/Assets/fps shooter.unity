@@ -888,6 +888,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 384761601}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &384850545
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 384850546}
+  m_Layer: 0
+  m_Name: gamemaster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &384850546
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384850545}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.2, y: 3.3042064, z: -18.304}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &392818270 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 636647997477928755, guid: a8e016473d895d74f9929f3ee576d111, type: 3}
@@ -1874,7 +1904,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 703f8594aeefe6143b79c0c128137551, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sh_scr_3: {fileID: 1727817902}
+  sh_scr: {fileID: 1727817902}
 --- !u!1 &839915036
 GameObject:
   m_ObjectHideFlags: 0
@@ -1979,7 +2009,7 @@ GameObject:
   - component: {fileID: 852177146}
   m_Layer: 0
   m_Name: Button_hard
-  m_TagString: Untagged
+  m_TagString: Spawner_out
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2075,7 +2105,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af646e0f326981f478a11fb8eb4124b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sp_speed_hard: {fileID: 893085015}
 --- !u!1 &863803171
 GameObject:
   m_ObjectHideFlags: 0
@@ -2258,7 +2287,7 @@ GameObject:
   - component: {fileID: 893085015}
   m_Layer: 0
   m_Name: target_spawner
-  m_TagString: Untagged
+  m_TagString: Spawner_out
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2289,7 +2318,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c311e2ddb24ebd746b8f25822df1ef97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ch_mod_2: {fileID: 1885185454}
   Target: {fileID: 4453822153091447004, guid: 1b543cc7a8f68e24bbc262616bcaa3e3, type: 3}
   green_target: {fileID: 4453822153091447004, guid: 5eaed943ec8bddf4c9dd36d689c9ff51, type: 3}
   dark_target: {fileID: 7384585021803073861, guid: 01825273d85554d40888d461dcc7f2d2, type: 3}
@@ -3045,7 +3073,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c11fe8333856bc74c801412d9ba26e02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sp_speed_hard: {fileID: 893085015}
 --- !u!1 &1350744429
 GameObject:
   m_ObjectHideFlags: 0
@@ -3444,11 +3471,11 @@ GameObject:
   - component: {fileID: 1617502370}
   m_Layer: 0
   m_Name: Spawner
-  m_TagString: Untagged
+  m_TagString: Spawner_in
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1617502369
 Transform:
   m_ObjectHideFlags: 0
@@ -3477,7 +3504,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 110f911862cd45a47bdedf71fc5581e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  challenge_mod: {fileID: 1885185454}
   speed: 1
   angle: 0
 --- !u!1 &1625741584
@@ -4450,7 +4476,7 @@ GameObject:
   - component: {fileID: 1885185454}
   m_Layer: 0
   m_Name: Button_Challenge
-  m_TagString: Untagged
+  m_TagString: challenge_button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4546,8 +4572,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbd958b2877c8664995a916d719f0076, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawner_in_script: {fileID: 1617502370}
-  spawner_out_script: {fileID: 893085015}
 --- !u!1 &1959647860
 GameObject:
   m_ObjectHideFlags: 0

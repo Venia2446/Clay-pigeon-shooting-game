@@ -5,14 +5,21 @@ using UnityEngine;
 public class hard_mod : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Spawner_out Sp_speed_hard;
+    private Spawner_out sp_speed_hard;
 
+
+    private void Start()
+    {
+        GameObject spawner_speed_hard;
+        spawner_speed_hard = GameObject.FindGameObjectWithTag("Spawner_out");
+        sp_speed_hard = spawner_speed_hard.GetComponent<Spawner_out>();
+    }
     // Update is called once per frame
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Bullet")
         {
-            Sp_speed_hard.speed = 2000;
+            sp_speed_hard.speed = 1500;
         }
     }
 }
