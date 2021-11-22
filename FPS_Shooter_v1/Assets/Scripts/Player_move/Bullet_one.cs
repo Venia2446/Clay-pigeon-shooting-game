@@ -11,7 +11,7 @@ public class Bullet_one : MonoBehaviour
 
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        Debug.Log(hit);
+        
         if (hit.collider.tag == "ammo_box")
         {
             sh_scr.box_safe_ammo();

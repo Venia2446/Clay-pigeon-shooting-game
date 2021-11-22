@@ -12,7 +12,7 @@ public class MovePlayer : MonoBehaviour
     {
         CH_ctr = GetComponent<CharacterController>();
     }
-    void Update()
+    void FixedUpdate()
     {
         x_move = Input.GetAxis("Vertical")*speed*Time.deltaTime;
         y_move = Input.GetAxis("Horizontal") * speed * Time.deltaTime;

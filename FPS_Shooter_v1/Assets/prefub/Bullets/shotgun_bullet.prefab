@@ -15,9 +15,10 @@ GameObject:
   - component: {fileID: 129494340450282506}
   - component: {fileID: -134206570496199629}
   - component: {fileID: -377442617448273019}
+  - component: {fileID: -2644653810050768269}
   m_Layer: 6
   m_Name: shotgun_bullet
-  m_TagString: Untagged
+  m_TagString: shotgun_bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -142,7 +143,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: aae908833b54d0949a491efd6037fb4b, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.17
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -226,3 +227,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-2644653810050768269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129494340450282501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6022846731dde884e83276cf59feb36c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text_score_alt_2: {fileID: 1300006536321496755, guid: b881118e6fed3414f9a0d67205028d35, type: 3}

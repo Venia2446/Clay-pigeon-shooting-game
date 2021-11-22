@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb9de416cb7fed248b70d4a1fe55158d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Explosion: {fileID: 1134129239631916, guid: 7e48ba6b1b968764490bbc70b66e3fe1, type: 3}
+  Explosion: {fileID: 100000, guid: 83cd9cc9f9c88824ba18dc59b05ae328, type: 3}
   Text_score: {fileID: 1300006536321496755, guid: 3849200d70b912e40be0dabf25883926, type: 3}
   Text_score_10: {fileID: 1300006536321496755, guid: f49518fc9340ab74a9dc60facac7e8fb, type: 3}
   speed: 1000
@@ -142,7 +142,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: aae908833b54d0949a491efd6037fb4b, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 0
   Mute: 0

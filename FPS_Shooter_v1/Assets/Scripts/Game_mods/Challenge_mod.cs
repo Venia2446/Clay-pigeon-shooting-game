@@ -35,7 +35,7 @@ public class Challenge_mod : MonoBehaviour
         if (chalange_mode_status == true)
         {
             spawner_out_script.speed += 5 * Time.deltaTime; // методом
-            Debug.Log(chalange_mode_status);
+            
 
         }
     }
@@ -44,7 +44,7 @@ public class Challenge_mod : MonoBehaviour
         if (collision.gameObject.tag == "Bullet")
         {
             chalange_mode_status = true;
-            Debug.Log("HIT");
+            
             spawner_out_script.speed = 500;
 
         }

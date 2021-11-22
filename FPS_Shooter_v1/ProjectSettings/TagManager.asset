@@ -13,6 +13,7 @@ TagManager:
   - challenge_button
   - Spawner_in
   - Spawner_out
+  - shotgun_bullet_2
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - UI
   - shotgun_bullet_layer
   - bullet
-  - 
+  - shotgun_bullet_layer_2
   - 
   - 
   - 

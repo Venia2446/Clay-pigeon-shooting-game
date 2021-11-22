@@ -35,7 +35,7 @@ public class cossilsion_target : MonoBehaviour
     }
     public void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "green_target")
+        if (collision.gameObject.tag == "green_target") 
         {
             sch_scr.score_up_green();
             GameObject text_score_clone_10;
@@ -44,6 +44,7 @@ public class cossilsion_target : MonoBehaviour
             text_rb.velocity = transform.up * speed;
             Destroy(text_score_clone_10, 2);
             sch_scr.on_hit_green();
+            
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.tag == "Target")

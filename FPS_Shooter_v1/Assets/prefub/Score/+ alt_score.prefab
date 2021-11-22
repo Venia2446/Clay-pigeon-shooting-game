@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7879877292447874155}
   - component: {fileID: 1610207758708926718}
   m_Layer: 0
-  m_Name: +3 score
+  m_Name: + alt_score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82,7 +82,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1300006536321496755}
-  m_Text: +3
+  m_Text: +2
   m_OffsetZ: 0
   m_CharacterSize: 0.15
   m_LineSpacing: 1
@@ -95,7 +95,7 @@ TextMesh:
   m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   m_Color:
     serializedVersion: 2
-    rgba: 4278386432
+    rgba: 4278248191
 --- !u!54 &1610207758708926718
 Rigidbody:
   m_ObjectHideFlags: 0
