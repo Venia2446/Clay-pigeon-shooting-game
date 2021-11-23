@@ -12,19 +12,11 @@ public class Easy_mod : MonoBehaviour
         GameObject spawner_speed_easy;
         spawner_speed_easy = GameObject.FindGameObjectWithTag("Spawner_out");
          sp_speed_easy = spawner_speed_easy.GetComponent<Spawner_out>();
-        
-    
-    
     }
-
-    // Update is called once per frame
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Bullet")
         {
-            
-            
-            
             sp_speed_easy.easy_speed();
         }
     }

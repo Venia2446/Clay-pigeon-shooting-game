@@ -16,56 +16,37 @@ public class Spawner_out : MonoBehaviour
     private bool start_mod = false;
     private Challenge_mod challenge_mod;
     private Spawner_out spawner_out_script;
+    private Shutting_Screept shooting_scr;
 
-    public void easy_speed()
-    {
-        speed = 800;
-    }
-    public void hard_speed()
-    {
-        speed = 1500;
-    }
-
-
+    public void easy_speed() => speed = 800; 
+    public void hard_speed() => speed = 1500;
     public void _init(Challenge_mod ch_mod)
     {
         challenge_mod = ch_mod;
         challenge_mod.set_spawner_out(this);
     }
-
-
-
-
-    public void start_game()
-    {
-        start_mod = true;
-    }
-
-
+    public void start_game() => start_mod = true;
+ 
+    public void end_game() => start_mod = false;
     public double incaps_green_time_control()
     {
         green_time_control += 0.5;
         return green_time_control;
     }
 
-
-
-
     void Start()
     {
-
-
-        GameObject button;
+        GameObject scr_obj, button;
+        scr_obj = GameObject.Find("Player/Main Camera/Gun");
+        shooting_scr = scr_obj.gameObject.GetComponent<Shutting_Screept>();
+      
         button = GameObject.FindGameObjectWithTag("challenge_button");
         _init(button.GetComponent<Challenge_mod>());
         RB_Target = Target.GetComponent<Rigidbody>();
         rb_green_target = green_target.GetComponent<Rigidbody>();
     }
-
-
-
-        void FixedUpdate()
-        {
+    void FixedUpdate()
+    {
         if (start_mod == true)
         {
             int rnd = Random.Range(0, 500);
@@ -101,7 +82,11 @@ public class Spawner_out : MonoBehaviour
             }
 
         }
-    }
+        if (shooting_scr.ammo_count_check() == 0)
+        {
+            end_game();
+        }
+   }
         
 }
 

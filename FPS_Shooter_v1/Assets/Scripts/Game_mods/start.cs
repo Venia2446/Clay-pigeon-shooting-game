@@ -14,8 +14,6 @@ public class start : MonoBehaviour
         spawner = GameObject.FindGameObjectWithTag("Spawner_out");
         sh_scr = spawner.GetComponent<Spawner_out>();
     }
-
-
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Bullet")

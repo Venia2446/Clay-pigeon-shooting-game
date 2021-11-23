@@ -18,8 +18,6 @@ public class MovePlayer : MonoBehaviour
         y_move = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
         Vector3 forvard_move = transform.forward * x_move;
         Vector3 right_move = transform.right * y_move;
-
-
         CH_ctr.SimpleMove(forvard_move + right_move); 
     }
 }

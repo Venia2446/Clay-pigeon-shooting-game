@@ -19,8 +19,6 @@ public class cossilsion_target : MonoBehaviour
     {
         return sch_scr;
     }
-
-
     public void _init(Shutting_Screept sh)
     {
         sch_scr = sh;
@@ -43,8 +41,7 @@ public class cossilsion_target : MonoBehaviour
             text_score_clone_10 = Instantiate(Text_score_10, collision.transform.position, Quaternion.identity);
             text_rb.velocity = transform.up * speed;
             Destroy(text_score_clone_10, 2);
-            sch_scr.on_hit_green();
-            
+            sch_scr.on_hit_green();           
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.tag == "Target")

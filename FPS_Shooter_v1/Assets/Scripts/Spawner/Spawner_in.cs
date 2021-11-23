@@ -5,12 +5,9 @@ using UnityEngine;
 
 public class Spawner_in : MonoBehaviour
 {
+    public float speed, angle;
     private Challenge_mod challenge_mod;
-
-
-
-    
-
+    private Vector3 Spawm_rotatet;
 
     private void Start()
     {
@@ -22,11 +19,6 @@ public class Spawner_in : MonoBehaviour
         challenge_mod.set_spawner_in(this);
 
     }
-
-
-    public float speed;
-    public float angle;
-    private Vector3 Spawm_rotatet;
     void Update()
     {
         if (challenge_mod.get_chalange_mode_status() == true)

@@ -14,6 +14,7 @@ TagManager:
   - Spawner_in
   - Spawner_out
   - shotgun_bullet_2
+  - shoot_mash
   layers:
   - Default
   - TransparentFX
