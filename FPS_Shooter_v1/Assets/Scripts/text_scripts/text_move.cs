@@ -4,23 +4,11 @@ using UnityEngine;
 
 public class text_move : MonoBehaviour
 {
-    // Start is called before the first frame update
-
-    // Update is called once per frame
-
-
-
-    
     private TextMesh text_color;
     private float new_alpha;
-
-
     private void Start()
-    {
-        
+    {  
         text_color = gameObject.GetComponent<TextMesh>();
-        
-
     }
     public float low_alpha() => new_alpha -= 0.004f;
 
