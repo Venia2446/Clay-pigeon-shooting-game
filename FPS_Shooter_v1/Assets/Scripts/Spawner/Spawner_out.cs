@@ -7,7 +7,7 @@ public class Spawner_out : MonoBehaviour
     
     public GameObject Target;
     public GameObject green_target;
-    public GameObject dark_target;
+    public GameObject bomb;
     public float speed;
     private Rigidbody RB_Target;
     private Rigidbody rb_green_target;
@@ -53,9 +53,9 @@ public class Spawner_out : MonoBehaviour
 
             if (rnd == 50)
             {
-                GameObject new_dark_target = Instantiate(dark_target, transform.position, transform.rotation);
-                new_dark_target.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * speed);
-                Destroy(new_dark_target, 3f);
+                GameObject new_bomb = Instantiate(bomb, transform.position, transform.rotation);
+                new_bomb.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * speed);
+                Destroy(new_bomb, 3f);
             }
 
             incaps_green_time_control();
@@ -82,7 +82,7 @@ public class Spawner_out : MonoBehaviour
             }
 
         }
-        if (shooting_scr.ammo_count_check() == 0)
+        if (shooting_scr.Ammo == 0)
         {
             end_game();
         }

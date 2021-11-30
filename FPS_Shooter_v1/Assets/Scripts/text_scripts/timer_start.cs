@@ -8,6 +8,7 @@ public class timer_start : MonoBehaviour
     private Challenge_mod ch_mod;
     private Spawner_out spawner_out_script;
     private float timer = 10;
+    private float go_timer = 2;
     private bool once = true;
     public float time_count() => timer;
     void Start()
@@ -19,7 +20,7 @@ public class timer_start : MonoBehaviour
     }
     public void Update()
     {
-        Debug.Log(time_count());
+        
         if (timer > 0 && ch_mod.timer_status_check() == true)
         {
             timer -= Time.deltaTime;
@@ -27,13 +28,23 @@ public class timer_start : MonoBehaviour
         }
         else if (timer<0 && once == true)
         {
+
+            
             ch_mod.challenge_mod_start();
             spawner_out_script.start_game();
             once = false;
         }
         else
         {
-            gameObject.GetComponent<TextMeshProUGUI>().text = string.Empty;
+            if (go_timer > 0 & timer < 0 )
+            {
+                go_timer -= Time.deltaTime;
+                gameObject.GetComponent<TextMeshProUGUI>().text = "GO!!!";
+            }
+            else
+            {
+                gameObject.GetComponent<TextMeshProUGUI>().text = string.Empty;
+            }          
         }
 
         // надо перезапуска таймер если заово начал режим!!!!

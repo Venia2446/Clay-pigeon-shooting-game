@@ -9,7 +9,7 @@ public class Shutting_Screept : MonoBehaviour
 {
     private Challenge_mod ch_mod;
 
-    private int Ammo = 100;
+    private int ammo = 100;
     private int ammo_alt_counter = 10;
     public float bullet_speed;
     public float shot_gun_bullet_speed;
@@ -40,30 +40,40 @@ public class Shutting_Screept : MonoBehaviour
 
         ch_mod = button.GetComponent<Challenge_mod>();
         bullet_Rb = bullet.GetComponent<Rigidbody>();
-        ammo_text.text = ($"Ammo:{Ammo}");
+        ammo_text.text = ($"Ammo:{ammo}");
         ammo_alt_text.text = ($"Alt Ammo:{ammo_alt_counter}");
         
     }
-    public int ammo_count_check() { return Ammo;}
+    public int ammo_count_check() { return ammo;}
+
+    public int Ammo 
+    {
+        get { return ammo;}
+        set { ammo = value;}
+    }
+
+
+
     public void ammo_alt_shoot() => ammo_alt_counter -= 1; 
     public void ammo_alt_up() => ammo_alt_counter += 2;
-    public void box_safe_ammo() => Ammo = 1;
-    public void on_hit_green() => Ammo += 10;
-    public void on_hit() => Ammo += 3;
+    public void box_safe_ammo() => ammo = 1;
+    public void on_hit_green() => ammo += 10;
+    public void on_hit() => ammo += 3;
+    public void explosion_score_up() => player_score += 300;
     public void score_up_green() => player_score += 500;
     public void score_up() => player_score += 100;
     public void reset_score() => player_score = 0;
-    public void zero_Ammo() => Ammo = 0;
-    public void ammo_low() => Ammo--;
+    public void zero_Ammo() => ammo = 0;
+    public void ammo_low() => ammo--;
     public void reset_ammo()
     {
-        Ammo = 100;
+        ammo = 100;
         ammo_alt_counter = 10;        
     }
     public void challenge_ammo_caunter()
     {
-        Ammo -= 5;
-        if (Ammo < 0)
+        ammo -= 5;
+        if (ammo < 0)
         {
             zero_Ammo();
         }
@@ -73,12 +83,12 @@ public class Shutting_Screept : MonoBehaviour
 
     private void FixedUpdate()
     {
-        ammo_text.text = ($"Ammo:{Ammo}");
+        ammo_text.text = ($"Ammo:{ammo}");
         ammo_alt_text.text = ($"Alt Ammo:{ammo_alt_counter}");
         ammo_challenge_time_control += 0.5;
         if (ch_mod.get_chalange_mode_status() == true)
         {
-            if (Ammo > 0)
+            if (ammo > 0)
             {
                 if (ammo_challenge_time_control % 50 == 0)
                     challenge_ammo_caunter();
@@ -92,10 +102,13 @@ public class Shutting_Screept : MonoBehaviour
     }
     void Update()
     {
-
+        if (Ammo > 100)
+        {
+            Ammo = 100;
+        }
 
         score_text.text = ($"Score:{player_score}"); ;
-        if (Input.GetKeyDown(KeyCode.Mouse0) && Ammo > 0)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && ammo > 0)
         {
             shoot_mash.SetActive(true);        
             new_bullet = Instantiate(bullet, bullet_spawn.position, bullet_spawn.rotation);
