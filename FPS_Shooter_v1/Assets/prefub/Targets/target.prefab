@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 4453822153091447006}
   - component: {fileID: 4453822153091447005}
   - component: {fileID: 4453822153091447001}
-  m_Layer: 0
+  - component: {fileID: 5555410512241676556}
+  m_Layer: 3
   m_Name: target
   m_TagString: Target
   m_Icon: {fileID: 0}
@@ -112,3 +113,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5555410512241676556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4453822153091447004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10d664fbe630eff418222684ce9cfcca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  green_hit_sound: {fileID: 4453822153091447004, guid: 5eaed943ec8bddf4c9dd36d689c9ff51, type: 3}
+  red_hit_sound: {fileID: 3920935176002092164, guid: e0cbecc7c91b6d64bb717c8fad11fd8e, type: 3}
+  bomb_hit_sound: {fileID: 5528954188803486248, guid: 58710f332ef054945a2f90bb818c8c39, type: 3}

@@ -9,22 +9,13 @@ public class bomb_script : MonoBehaviour
     public float exp_radius;
     public GameObject bomb_ExplosionEffect;
     public GameObject target_ExplosionEffect;
-    public GameObject bomb_sound;
     
-    private void bomb_score()
-    {
-
-    }
-
     private void Start()
     {
         GameObject shr_scr_gameobj = GameObject.Find("Player/Main Camera/Gun");
         shr_scr = shr_scr_gameobj.GetComponent<Shutting_Screept>();
         
 }
-
-
-
     private void OnDrawGizmos()
     {
         Gizmos.DrawSphere(transform.position, exp_radius);
@@ -32,14 +23,12 @@ public class bomb_script : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Bullet" || collision.gameObject.tag == "shotgun_bullet_2")
-        {
-            
+        {           
             bomb_explosion();
         }
     }
     private void bomb_explosion()
     {
-
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, exp_radius);
         foreach (var hitCollider in hitColliders)
         {
@@ -47,7 +36,7 @@ public class bomb_script : MonoBehaviour
             if (hit_coll_rb)
 
             {
-                GameObject contacts_gameobj = hitCollider.GetComponent<Collider>().gameObject;
+                GameObject contacts_gameobj = hitCollider.gameObject;
                 if (contacts_gameobj.tag == "Target" || contacts_gameobj.tag == "green_target")
                 {
                     shr_scr.Ammo += 5;
@@ -58,7 +47,6 @@ public class bomb_script : MonoBehaviour
             }
         }
         Instantiate(bomb_ExplosionEffect, gameObject.transform.position, Quaternion.identity);
-        Destroy(gameObject);
-    
+        Destroy(gameObject);   
     }
 }

@@ -10,16 +10,17 @@ public class Shutting_Screept : MonoBehaviour
     private Challenge_mod ch_mod;
 
     private int ammo = 100;
-    private int ammo_alt_counter = 10;
+    private int ammo_alt = 10;
     public float bullet_speed;
     public float shot_gun_bullet_speed;
     public Transform bullet_spawn;
     public GameObject bullet;
     public GameObject shotgun_bullet;
+    public AudioSource shoot_sound_1;
+    public AudioSource shoot_sound_2;
     public Text ammo_text;
     public TMP_Text score_text;
     public TMP_Text ammo_alt_text;
-    
     private GameObject shoot_mash;
     private GameObject new_bullet;
     private GameObject new_shotgun_bullet;
@@ -51,7 +52,11 @@ public class Shutting_Screept : MonoBehaviour
         get { return ammo;}
         set { ammo = value;}
     }
-
+    public int ammo_alt_counter
+    {
+        get { return ammo_alt; }
+        set { ammo_alt = value; }
+    }
 
 
     public void ammo_alt_shoot() => ammo_alt_counter -= 1; 
@@ -106,10 +111,15 @@ public class Shutting_Screept : MonoBehaviour
         {
             Ammo = 100;
         }
+        if (ammo_alt_counter > 10)
+        {
+            ammo_alt_counter = 10;
+        }
 
         score_text.text = ($"Score:{player_score}"); ;
         if (Input.GetKeyDown(KeyCode.Mouse0) && ammo > 0)
         {
+            shoot_sound_1.Play();
             shoot_mash.SetActive(true);        
             new_bullet = Instantiate(bullet, bullet_spawn.position, bullet_spawn.rotation);
             new_bullet.GetComponent<cossilsion_target>()._init(this);
@@ -123,6 +133,7 @@ public class Shutting_Screept : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Mouse1) && ammo_alt_counter > 0)
         {
+            shoot_sound_2.Play();
             shoot_mash.SetActive(true);
             ammo_alt_shoot();
 

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1921228458238580702}
   - component: {fileID: 353279415235267442}
   - component: {fileID: 8496372036715955294}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,9 +110,10 @@ GameObject:
   - component: {fileID: 6686817632436620336}
   - component: {fileID: 3862670101691676667}
   - component: {fileID: -8233144694098454176}
-  m_Layer: 0
+  - component: {fileID: -3750240053060041827}
+  m_Layer: 3
   m_Name: bomb
-  m_TagString: Untagged
+  m_TagString: bomb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -225,4 +226,18 @@ MonoBehaviour:
   exp_radius: 15
   bomb_ExplosionEffect: {fileID: 1247311384876784, guid: 4adffb0018aeda44e9263f901167af1f, type: 3}
   target_ExplosionEffect: {fileID: 100018, guid: a40b64bf23366dc42a892af2c6ff6140, type: 3}
-  bomb_sound: {fileID: 0}
+--- !u!114 &-3750240053060041827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7384585021803073861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10d664fbe630eff418222684ce9cfcca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  green_hit_sound: {fileID: 2015603159533695091, guid: a2b64dc7cf758e940ac0def165ef24aa, type: 3}
+  red_hit_sound: {fileID: 3920935176002092164, guid: e0cbecc7c91b6d64bb717c8fad11fd8e, type: 3}
+  bomb_hit_sound: {fileID: 5528954188803486248, guid: 58710f332ef054945a2f90bb818c8c39, type: 3}

@@ -30,10 +30,7 @@ public class Shotgun_bullet_collision : MonoBehaviour
             Destroy(text_score_alt_2_clone, 2);
             Destroy(collision.gameObject);
         }
-        if (collision.gameObject.name == "test_prefub") // заготовка под бомбу???
-        {
-            Debug.Log("hit");
-        }
+
         Destroy(gameObject);       
     }
 }

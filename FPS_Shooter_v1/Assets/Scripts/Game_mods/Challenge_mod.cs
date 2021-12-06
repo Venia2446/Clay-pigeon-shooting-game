@@ -15,18 +15,11 @@ public class Challenge_mod : MonoBehaviour
     public void set_spawner_out(Spawner_out spawner_out_script) => this.spawner_out_script = spawner_out_script;
     public bool get_chalange_mode_status() => challenge_mode_status;
     public float spawner_chellenge_mode_speed_rotation() { return spawner_out_script.speed += 5 * Time.deltaTime; }
-    public void challenge_mod_start()
-    {
+    public void challenge_mod_start() => challenge_mode_status = true;
 
-        challenge_mode_status = true;
-    }
     public bool timer_status_start() => timer_start_on_collison = true;
     public bool timer_status_check() => timer_start_on_collison;
-    public bool chalenge_mode_false_status()
-    {
-        challenge_mode_status = false;
-        return challenge_mode_status;
-    }
+    public bool chalenge_mode_false_status() => challenge_mode_status = false;
     
     
     

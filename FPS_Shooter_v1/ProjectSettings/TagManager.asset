@@ -16,11 +16,12 @@ TagManager:
   - shotgun_bullet_2
   - shoot_mash
   - bomb
+  - FxTemporaire
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - target
   - Water
   - UI
   - shotgun_bullet_layer

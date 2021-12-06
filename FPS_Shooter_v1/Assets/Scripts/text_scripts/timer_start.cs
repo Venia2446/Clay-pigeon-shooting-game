@@ -11,6 +11,8 @@ public class timer_start : MonoBehaviour
     private float go_timer = 2;
     private bool once = true;
     public float time_count() => timer;
+    public void once_setart() => once = true;
+    
     void Start()
     {
         GameObject ch_button = GameObject.Find("/tablo/Button_Challenge");

@@ -9,7 +9,7 @@ public class Water_collision : MonoBehaviour
     {
 
 
-        if (collision.gameObject.tag == "Target" | collision.gameObject.tag == "green_target")
+        if (collision.gameObject.tag == "Target" | collision.gameObject.tag == "green_target" | collision.gameObject.tag == "bomb")
         {
             Destroy(collision.gameObject);
         }
