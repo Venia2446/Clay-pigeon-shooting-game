@@ -5,22 +5,19 @@ using UnityEngine;
 public class Bullet_one : MonoBehaviour
 {
      
-    private Shutting_Screept shr_scr;
-    private CharacterController chr_cntr;
+    private ShootingScript _shootingScript;
+    private CharacterController _characterController;
 
 
     public void Start()
     {
-        GameObject sh_scr_gameobj;
-        sh_scr_gameobj = GameObject.Find("Player/Main Camera/Gun");
-        shr_scr = sh_scr_gameobj.GetComponent<Shutting_Screept>();
+        GameObject _shootingScriptGameobject;
+        _shootingScriptGameobject = GameObject.Find("Player/Main Camera/Gun");
+        _shootingScript = _shootingScriptGameobject.GetComponent<ShootingScript>();
     }
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if (hit.gameObject.tag == "ammo_box")
-        {
-            shr_scr.box_safe_ammo();
-        }
+        if (hit.gameObject.tag == "ammo_box") _shootingScript.BoxSafeAmmo();
     }
 
 

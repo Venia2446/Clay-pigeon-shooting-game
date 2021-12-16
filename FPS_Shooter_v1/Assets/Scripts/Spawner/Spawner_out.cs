@@ -6,68 +6,67 @@ public class Spawner_out : MonoBehaviour
 {
     
     public GameObject Target;
-    public GameObject green_target;
-    public GameObject bomb;
-    public float speed;
-    private Rigidbody RB_Target;
-    private Rigidbody rb_green_target;
-    private float _timeParams;
-    private double green_time_control;
-    private bool start_mod = false;
-    private Challenge_mod challenge_mod;
-    private Spawner_out spawner_out_script;
-    private Shutting_Screept shooting_scr;
+    public GameObject GreenTarget;
+    public GameObject Bomb;
+    public float Speed;
 
-    public void easy_speed() => speed = 800; 
-    public void hard_speed() => speed = 1500;
+    private Rigidbody _rbRedTarget;
+    private Rigidbody _rbGreenTarget;
+    private float _timeParams;
+    private double _greenTimeControl;
+    private bool _startMod = false;
+    private Challenge_mod _challengeMod;
+    private Spawner_out _spawnerOutScript;
+    private ShootingScript _shootingScript;
+
+    public void EasySpeed() => Speed = 800; 
+    public void HardSpeed() => Speed = 1500;
     public void _init(Challenge_mod ch_mod)
     {
-        challenge_mod = ch_mod;
-        challenge_mod.set_spawner_out(this);
+        _challengeMod = ch_mod;
+        _challengeMod.SetSpawnerOut(this);
     }
-    public void start_game() => start_mod = true;
+    public void StartGame() => _startMod = true;
  
-    public void end_game() => start_mod = false;
-    public double incaps_green_time_control()
+    public void EndGame() => _startMod = false;
+    public double _greenTimeControlMethod()
     {
-        green_time_control += 0.5;
-        return green_time_control;
+        _greenTimeControl += 0.5;
+        return _greenTimeControl;
     }
-
     void Start()
     {
-        GameObject scr_obj, button;
-        scr_obj = GameObject.Find("Player/Main Camera/Gun");
-        shooting_scr = scr_obj.gameObject.GetComponent<Shutting_Screept>();
+        GameObject _shootingScriptObject, _button;
+        _shootingScriptObject = GameObject.Find("Player/Main Camera/Gun");
+        _shootingScript = _shootingScriptObject.gameObject.GetComponent<ShootingScript>();
       
-        button = GameObject.FindGameObjectWithTag("challenge_button");
-        _init(button.GetComponent<Challenge_mod>());
-        RB_Target = Target.GetComponent<Rigidbody>();
-        rb_green_target = green_target.GetComponent<Rigidbody>();
+        _button = GameObject.FindGameObjectWithTag("challenge_button");
+        _init(_button.GetComponent<Challenge_mod>());
+        _rbRedTarget = Target.GetComponent<Rigidbody>();
+        _rbGreenTarget = GreenTarget.GetComponent<Rigidbody>();
     }
     void FixedUpdate()
     {
-        if (start_mod == true)
+        if (_startMod == true)
         {
-            int rnd = Random.Range(0, 500);
+            int _randomValue = Random.Range(0, 500);
 
-            if (rnd == 50)
+            if (_randomValue == 50)
             {
-                GameObject new_bomb = Instantiate(bomb, transform.position, transform.rotation);
-                new_bomb.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * speed);
-                Destroy(new_bomb, 3f);
+                GameObject _bombClone = Instantiate(Bomb, transform.position, transform.rotation);
+                _bombClone.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * Speed);
+                Destroy(_bombClone, 3f);
             }
 
-            incaps_green_time_control();
+            _greenTimeControlMethod();
             _timeParams += Time.deltaTime;
 
-            if (challenge_mod.get_chalange_mode_status() == true)
+            if (_challengeMod.GetChallengeModeStatus() == true)
             {
-                if (green_time_control % 200 == 0)
+                if (_greenTimeControl % 200 == 0)
                 {
-
-                    GameObject new_green_Target = Instantiate(green_target, transform.position, transform.rotation);
-                    new_green_Target.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * speed);
+                    GameObject new_green_Target = Instantiate(GreenTarget, transform.position, transform.rotation);
+                    new_green_Target.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * Speed);
                     Destroy(new_green_Target, 3f);
                     _timeParams = 0;
                 }
@@ -76,16 +75,12 @@ public class Spawner_out : MonoBehaviour
             {
 
                 GameObject New_Target = Instantiate(Target, transform.position, transform.rotation);
-                New_Target.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * speed);
+                New_Target.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * Speed);
                 Destroy(New_Target, 3f);
                 _timeParams = 0;
             }
-
         }
-        if (shooting_scr.Ammo == 0)
-        {
-            end_game();
-        }
+        if (_shootingScript.Ammo == 0) EndGame();
    }
         
 }

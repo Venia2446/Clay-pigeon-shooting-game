@@ -17,7 +17,7 @@ public class Easy_mod : MonoBehaviour
     {
         if (collision.gameObject.tag == "Bullet")
         {
-            sp_speed_easy.easy_speed();
+            sp_speed_easy.EasySpeed();
         }
     }
 }

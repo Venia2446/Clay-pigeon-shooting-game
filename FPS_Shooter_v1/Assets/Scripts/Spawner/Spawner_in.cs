@@ -16,12 +16,12 @@ public class Spawner_in : MonoBehaviour
      
         challenge_mod = button.GetComponent<Challenge_mod>();
 
-        challenge_mod.set_spawner_in(this);
+        challenge_mod.SetSpawnerIn(this);
 
     }
     void Update()
     {
-        if (challenge_mod.get_chalange_mode_status() == true)
+        if (challenge_mod.GetChallengeModeStatus() == true)
         {
             speed += Random.Range(-10f, 10f);
             angle += Random.Range(-5f, 5f);

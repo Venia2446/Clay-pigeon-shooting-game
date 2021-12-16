@@ -128,4 +128,4 @@ MonoBehaviour:
   Explosion: {fileID: 100000, guid: 83cd9cc9f9c88824ba18dc59b05ae328, type: 3}
   Text_score: {fileID: 1300006536321496755, guid: 3849200d70b912e40be0dabf25883926, type: 3}
   Text_score_10: {fileID: 1300006536321496755, guid: f49518fc9340ab74a9dc60facac7e8fb, type: 3}
-  speed: 1000
+  speed: 1200

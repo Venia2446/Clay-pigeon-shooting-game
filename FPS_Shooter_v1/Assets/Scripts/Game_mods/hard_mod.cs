@@ -19,7 +19,7 @@ public class hard_mod : MonoBehaviour
     {
         if (collision.gameObject.tag == "Bullet")
         {
-            sp_speed_hard.speed = 1500;
+            sp_speed_hard.Speed = 1500;
         }
     }
 }

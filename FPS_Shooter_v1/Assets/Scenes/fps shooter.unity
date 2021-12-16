@@ -2542,9 +2542,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 4453822153091447004, guid: 1b543cc7a8f68e24bbc262616bcaa3e3, type: 3}
-  green_target: {fileID: 4453822153091447004, guid: 5eaed943ec8bddf4c9dd36d689c9ff51, type: 3}
-  bomb: {fileID: 7384585021803073861, guid: 01825273d85554d40888d461dcc7f2d2, type: 3}
-  speed: 900
+  GreenTarget: {fileID: 4453822153091447004, guid: 5eaed943ec8bddf4c9dd36d689c9ff51, type: 3}
+  Bomb: {fileID: 7384585021803073861, guid: 01825273d85554d40888d461dcc7f2d2, type: 3}
+  Speed: 900
 --- !u!1 &934704636
 GameObject:
   m_ObjectHideFlags: 0
@@ -5726,9 +5726,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1885185454}
     - target: {fileID: 636647997477928754, guid: a8e016473d895d74f9929f3ee576d111, type: 3}
+      propertyPath: AmmoText
+      value: 
+      objectReference: {fileID: 655995464}
+    - target: {fileID: 636647997477928754, guid: a8e016473d895d74f9929f3ee576d111, type: 3}
       propertyPath: Ammo_text
       value: 
       objectReference: {fileID: 655995464}
+    - target: {fileID: 636647997477928754, guid: a8e016473d895d74f9929f3ee576d111, type: 3}
+      propertyPath: ScoreText
+      value: 
+      objectReference: {fileID: 381128441}
     - target: {fileID: 636647997477928754, guid: a8e016473d895d74f9929f3ee576d111, type: 3}
       propertyPath: ammo_text
       value: 
@@ -5738,6 +5746,26 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 381128441}
     - target: {fileID: 636647997477928754, guid: a8e016473d895d74f9929f3ee576d111, type: 3}
+      propertyPath: AmmoAltText
+      value: 
+      objectReference: {fileID: 1158338365}
+    - target: {fileID: 636647997477928754, guid: a8e016473d895d74f9929f3ee576d111, type: 3}
+      propertyPath: BulletSpawn
+      value: 
+      objectReference: {fileID: 1593931930}
+    - target: {fileID: 636647997477928754, guid: a8e016473d895d74f9929f3ee576d111, type: 3}
+      propertyPath: BulletSpeed
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 636647997477928754, guid: a8e016473d895d74f9929f3ee576d111, type: 3}
+      propertyPath: ShootSound1
+      value: 
+      objectReference: {fileID: 1031265305}
+    - target: {fileID: 636647997477928754, guid: a8e016473d895d74f9929f3ee576d111, type: 3}
+      propertyPath: ShootSound2
+      value: 
+      objectReference: {fileID: 245153586}
+    - target: {fileID: 636647997477928754, guid: a8e016473d895d74f9929f3ee576d111, type: 3}
       propertyPath: bullet_spawn
       value: 
       objectReference: {fileID: 1593931930}
@@ -5745,6 +5773,10 @@ PrefabInstance:
       propertyPath: bullet_speed
       value: 10000
       objectReference: {fileID: 0}
+    - target: {fileID: 636647997477928754, guid: a8e016473d895d74f9929f3ee576d111, type: 3}
+      propertyPath: ShotgunBullet
+      value: 
+      objectReference: {fileID: 3277239050254632730, guid: c7f2f4f80a040124990f2ba8cd99a98c, type: 3}
     - target: {fileID: 636647997477928754, guid: a8e016473d895d74f9929f3ee576d111, type: 3}
       propertyPath: ammo_alt_text
       value: 
@@ -5761,6 +5793,10 @@ PrefabInstance:
       propertyPath: shotgun_bullet
       value: 
       objectReference: {fileID: 3277239050254632730, guid: c7f2f4f80a040124990f2ba8cd99a98c, type: 3}
+    - target: {fileID: 636647997477928754, guid: a8e016473d895d74f9929f3ee576d111, type: 3}
+      propertyPath: ShotgunBulletSpeed
+      value: 10000
+      objectReference: {fileID: 0}
     - target: {fileID: 636647997477928754, guid: a8e016473d895d74f9929f3ee576d111, type: 3}
       propertyPath: shot_gun_bullet_speed
       value: 10000

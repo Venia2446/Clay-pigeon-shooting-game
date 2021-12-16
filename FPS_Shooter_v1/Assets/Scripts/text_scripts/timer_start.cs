@@ -22,18 +22,15 @@ public class timer_start : MonoBehaviour
     }
     public void Update()
     {
-        
-        if (timer > 0 && ch_mod.timer_status_check() == true)
+        if (timer > 0 && ch_mod.TimerStatusCheck() == true)
         {
             timer -= Time.deltaTime;
             gameObject.GetComponent<TextMeshProUGUI>().text = Mathf.Round(timer).ToString();
         }
         else if (timer<0 && once == true)
         {
-
-            
-            ch_mod.challenge_mod_start();
-            spawner_out_script.start_game();
+            ch_mod.ChallengeModStart();
+            spawner_out_script.StartGame();
             once = false;
         }
         else
@@ -43,17 +40,9 @@ public class timer_start : MonoBehaviour
                 go_timer -= Time.deltaTime;
                 gameObject.GetComponent<TextMeshProUGUI>().text = "GO!!!";
             }
-            else
-            {
-                gameObject.GetComponent<TextMeshProUGUI>().text = string.Empty;
-            }          
+            else gameObject.GetComponent<TextMeshProUGUI>().text = string.Empty;           
         }
-
-        // надо перезапуска таймер если заово начал режим!!!!
     }
-
-
-
 }
 
 

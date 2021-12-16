@@ -4,28 +4,24 @@ using UnityEngine;
 
 public class Restar : MonoBehaviour
 {
-    private Challenge_mod ch_mod;
-    private timer_start timer_start;
+    private Challenge_mod _challengeMod;
+    private timer_start _timerStart;
 
     private void Start()
     {
-        GameObject challenge_button = GameObject.FindGameObjectWithTag("challenge_button");
-        ch_mod = challenge_button.GetComponent<Challenge_mod>();
-        GameObject timer_game_obj = GameObject.Find("/Canvas/text_timer");
-        timer_start = timer_game_obj.GetComponent<timer_start>();
+        GameObject _challengeButton = GameObject.FindGameObjectWithTag("challenge_button");
+        _challengeMod = _challengeButton.GetComponent<Challenge_mod>();
+        GameObject _timerGameObject = GameObject.Find("/Canvas/text_timer");
+        _timerStart = _timerGameObject.GetComponent<timer_start>();
     }
-
-
-
 
     private void OnCollisionEnter(Collision collision) 
     {
         if (collision.gameObject.tag == "Bullet")
         {
-            ch_mod.chalenge_mode_false_status();
-            collision.gameObject.GetComponent<cossilsion_target>().Get_shut_scr().reset_ammo(); 
-            collision.gameObject.GetComponent<cossilsion_target>().Get_shut_scr().reset_score();
-            //timer_start.once_setart();
-}    
+            _challengeMod.ChallengeModeFalseStatus();
+            collision.gameObject.GetComponent<CollisionTarget>().GetShootingScript().ResetAmmo(); 
+            collision.gameObject.GetComponent<CollisionTarget>().GetShootingScript().ResetScore();
+        }    
     }
 }

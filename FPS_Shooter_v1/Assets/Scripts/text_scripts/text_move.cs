@@ -4,22 +4,20 @@ using UnityEngine;
 
 public class text_move : MonoBehaviour
 {
-    private TextMesh text_color;
-    private float new_alpha;
+    private TextMesh _textColor;
+    private float _newAlpha;
     private void Start()
     {  
-        text_color = gameObject.GetComponent<TextMesh>();
+        _textColor = gameObject.GetComponent<TextMesh>();
     }
-    public float low_alpha() => new_alpha -= 0.004f;
+    public float low_alpha() => _newAlpha -= 0.004f;
 
 
     void Update()
     {
-        new_alpha = text_color.color.a;
+        _newAlpha = _textColor.color.a;
         low_alpha();
         transform.Translate(Vector3.up * 0.8f * Time.deltaTime);
-        text_color.color = new Color(text_color.color.r, text_color.color.g, text_color.color.b, new_alpha);
-        
-        
+        _textColor.color = new Color(_textColor.color.r, _textColor.color.g, _textColor.color.b, _newAlpha);
     }
 }
